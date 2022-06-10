@@ -4,9 +4,9 @@ import java.util.Scanner;
 public class Principal {
     public static void main(String[] args) {
 
-        Scanner sc =  new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int opcion = 0;
-        do{
+        do {
             System.out.println("--------------------------");
             System.out.println("Aplicación de mensajes");
             System.out.println("1. Crear un mensaje");
@@ -14,14 +14,28 @@ public class Principal {
             System.out.println("3. Editar mensaje");
             System.out.println("4. Eliminar mensaje");
             System.out.println("5. Salir");
-        } while (opcion!=5);
 
-        Conexion connection = new Conexion();
-        try(Connection cnx= connection.getConection()) {
+            // leer la opcion del ususario
+            opcion  = sc.nextInt();
 
-        }catch (Exception e){
-            System.out.println(e);
-        }
-        System.out.println("MAin");
+            switch (opcion){
+                case 1 :
+                    MensajeServices.crearMensaje();
+                    break;
+                case 2 :
+                    MensajeServices.listraMensajes();
+                    break;
+                case 3 :
+                    MensajeServices.editarMensake();
+                    break;
+                case 4 :
+                    MensajeServices.borrarMensaje();
+                    break;
+                default:
+                    break;
+            }
+        } while (opcion != 5);
+
+
     }
 }
