@@ -11,8 +11,8 @@ public class Principal {
             System.out.println("Aplicación de mensajes");
             System.out.println("1. Crear un mensaje");
             System.out.println("2. Listar un mensaje");
-            System.out.println("3. Editar mensaje");
-            System.out.println("4. Eliminar mensaje");
+            System.out.println("3. Eliminar mensaje");
+            System.out.println("4. Editar mensaje");
             System.out.println("5. Salir");
 
             // leer la opcion del ususario
@@ -26,10 +26,10 @@ public class Principal {
                     MensajeServices.listraMensajes();
                     break;
                 case 3 :
-                    MensajeServices.editarMensake();
+                    MensajeServices.borrarMensaje();
                     break;
                 case 4 :
-                    MensajeServices.borrarMensaje();
+                    MensajeServices.editarMensaje();
                     break;
                 default:
                     break;
